@@ -9,14 +9,15 @@ public class EngineManager : MonoBehaviour
     private GameObject targetCar;
 
     private AudioSource engineAudio;
+    private DynamicEngineSound dynamicEngineSound;
     private bool isEngineOn = false;
 
     public void SetTargetCar(GameObject car)
     {
         targetCar = car;
         engineAudio = targetCar.GetComponent<AudioSource>();
+        dynamicEngineSound = targetCar.GetComponent<DynamicEngineSound>();
 
-        // Ensure audio is stopped initially
         if (engineAudio != null)
         {
             engineAudio.loop = true;
@@ -46,10 +47,14 @@ public class EngineManager : MonoBehaviour
         if (isEngineOn)
         {
             engineAudio.Play();
+            if (dynamicEngineSound != null)
+                dynamicEngineSound.enabled = true;
         }
         else
         {
             engineAudio.Stop();
+            if (dynamicEngineSound != null)
+                dynamicEngineSound.enabled = false;
         }
 
         UpdateButtonText();
