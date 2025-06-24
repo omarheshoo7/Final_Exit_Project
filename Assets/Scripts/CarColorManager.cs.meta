@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f2f7cd1fb14624838b4f304db55b58c1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Car_Black: {fileID: 2100000, guid: 092e4b8ca9553420ba998c4824a0a524, type: 2}
+  - Car_White: {fileID: 2100000, guid: 0230da48d713a470dbe85b94a0aad922, type: 2}
+  - Car_Red: {fileID: 2100000, guid: 0ca3a27c8174447e7b3d1d7d8497dc51, type: 2}
+  - Car_Blue: {fileID: 2100000, guid: 59fcb2379686044e7a8d6734332052c2, type: 2}
+  - Car_Green: {fileID: 2100000, guid: 088df39463bfa4fd894731fbbc9f4119, type: 2}
+  - Car_Orange: {fileID: 2100000, guid: 32342580359cb4b51bb481b9bf2258d7, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
