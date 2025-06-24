@@ -11,7 +11,13 @@ public class DoorManager : MonoBehaviour
         targetCar = car;
     }
 
-    public void ToggleDoor(string doorName)
+    public void ToggleAllDoors()
+    {
+        ToggleDoor("S_LeftDoor_LOD2");
+        ToggleDoor("S_RightDoor_LOD2");
+    }
+
+    private void ToggleDoor(string doorName)
     {
         Transform door = targetCar.transform.Find(doorName);
         if (door != null)
@@ -19,8 +25,8 @@ public class DoorManager : MonoBehaviour
             Animator anim = door.GetComponent<Animator>();
             if (anim != null)
             {
-                bool isOpen = anim.GetBool("Open");
-                anim.SetBool("Open", !isOpen);
+                bool isOpen = anim.GetBool("DoorisOpen");
+                anim.SetBool("DoorisOpen", !isOpen);
             }
         }
     }
